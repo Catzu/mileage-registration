@@ -114,11 +114,11 @@ class DeliveryDistanceCalculator:
         date_frame = ttk.Frame(self.main_tab)
         date_frame.pack(fill="x", padx=10, pady=10)
         
-        ttk.Label(date_frame, text="Datum (dd-mm-jjjj):").pack(side="left")
+        ttk.Label(date_frame, text="Datum (dd/mm/jjjj):").pack(side="left")
         self.date_entry = ttk.Entry(date_frame)
         self.date_entry.pack(side="left", padx=5)
         # Set default date to today
-        today = datetime.now().strftime("%d-%m-%Y")
+        today = datetime.now().strftime("%d/%m/%Y")
         self.date_entry.insert(0, today)
         
         # Button to select Excel file
@@ -378,7 +378,7 @@ class DeliveryDistanceCalculator:
         # Validate date format
         date = self.date_entry.get()
         try:
-            datetime.strptime(date, "%d-%m-%Y")
+            datetime.strptime(date, "%d/%m/%Y")
         except ValueError:
             messagebox.showerror("Datumfout", "Gebruik formaat: dd-mm-jjjj")
             self.status_var.set("Gereed")
