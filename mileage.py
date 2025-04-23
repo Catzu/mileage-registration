@@ -37,7 +37,7 @@ next_row = ws.max_row + 1 # +1 because we're going to append a new row
 formula = f"=E{next_row}*F{next_row}"
 
 # Append the new row with the dynamic formula
-ws.append(['18/04/2025', '5331 RD', '5324 JW', '', 20.1, 0.23, formula])
+ws.append(['18/04/2025', '5331 RD', '5324 JW', '', 1, 0.23, formula])
 
 # Save workbook
 wk.save('excel.xlsx')
