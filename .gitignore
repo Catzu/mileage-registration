@@ -1,1 +1,17 @@
 config.json
+dist/mileage.exe
+dist/excel.xlsx
+build/mileage/xref-mileage.html
+build/mileage/warn-mileage.txt
+build/mileage/PYZ-00.toc
+build/mileage/PYZ-00.pyz
+build/mileage/PKG-00.toc
+build/mileage/mileage.pkg
+build/mileage/localpycs/struct.pyc
+build/mileage/localpycs/pyimod04_pywin32.pyc
+build/mileage/localpycs/pyimod03_ctypes.pyc
+build/mileage/localpycs/pyimod02_importers.pyc
+build/mileage/localpycs/pyimod01_archive.pyc
+build/mileage/EXE-00.toc
+build/mileage/base_library.zip
+build/mileage/Analysis-00.toc
