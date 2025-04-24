@@ -282,9 +282,8 @@ class DeliveryDistanceCalculator:
             self.deliveries_entry.insert(0, "1")
             num = 1
         
-        # Header row
+        # Header row - only show postcode now
         ttk.Label(self.delivery_frame, text="Postcode", width=10).grid(row=0, column=0, padx=5, pady=2)
-        ttk.Label(self.delivery_frame, text="Alternatief adres", width=30).grid(row=0, column=1, padx=5, pady=2)
         
         self.postcode_entries = []
         self.address_entries = []
@@ -295,15 +294,12 @@ class DeliveryDistanceCalculator:
             postcode_label = ttk.Label(self.delivery_frame, text=f"#{i+1}:")
             postcode_label.grid(row=i+1, column=0, sticky="e", padx=5, pady=5)
             
-            postcode_frame = ttk.Frame(self.delivery_frame)
-            postcode_frame.grid(row=i+1, column=0, padx=5, pady=2)
-            
             postcode_entry = ttk.Entry(self.delivery_frame, width=10)
             postcode_entry.grid(row=i+1, column=0, padx=5, pady=2)
             self.postcode_entries.append(postcode_entry)
             
-            address_entry = ttk.Entry(self.delivery_frame, width=40)
-            address_entry.grid(row=i+1, column=1, padx=5, pady=2)
+            # Create address entries but don't display them in the UI
+            address_entry = ttk.Entry(self.delivery_frame)  # Create but don't grid
             self.address_entries.append(address_entry)
 
     def nominatim_geocode(self, address):
